@@ -1,5 +1,6 @@
 package com.example.frasesmotivacionais;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -16,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
 
     TextView textFrase;
     Button botaoNovaFrase;
+
+
 
     String[] frases = {
             "Acredite nos seus sonhos.",
@@ -35,7 +38,10 @@ public class MainActivity extends AppCompatActivity {
 
         botaoNovaFrase.setOnClickListener(v -> {
             int index = new Random().nextInt(frases.length);
-            textFrase.setText(frases[index]);
+            String frase = frases[index];
+            textFrase.setText(frase);
+
+
         });
     }
 }
