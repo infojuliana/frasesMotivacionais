@@ -18,7 +18,11 @@ public class MainActivity extends AppCompatActivity {
     TextView textFrase;
     Button botaoNovaFrase;
 
+<<<<<<< HEAD
 
+=======
+    Button botaoAbrir;
+>>>>>>> 316716f61ca7f1c865191f683d6ec50739a5a3b5
 
     String[] frases = {
             "Acredite nos seus sonhos.",
@@ -35,7 +39,12 @@ public class MainActivity extends AppCompatActivity {
 
         textFrase = findViewById(R.id.textFrase);
         botaoNovaFrase = findViewById(R.id.botaoNovaFrase);
+        botaoAbrir = findViewById(R.id.botaoAbrir);
 
+        botaoAbrir.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, SegundaActivity.class);
+            startActivity(intent);
+        });
         botaoNovaFrase.setOnClickListener(v -> {
             int index = new Random().nextInt(frases.length);
             String frase = frases[index];
